@@ -1,0 +1,33 @@
+# Data / model
+dataset_name: knkarthick/dialogsum
+model_name: google/flan-t5-small
+
+# Tokenization
+max_source_length: 512
+max_target_length: 128
+
+# Training (full FT)
+full_ft:
+  output_root: checkpoints/full
+  learning_rate: 1.0e-5
+  weight_decay: 0.01
+  num_train_epochs: 5
+  per_device_train_batch_size: 8
+  per_device_eval_batch_size: 8
+  gradient_accumulation_steps: 1
+  eval_strategy: epoch
+  save_strategy: epoch
+  log_strategy: epoch
+  seed: 42
+
+# LoRA
+lora:
+  output_root: checkpoints/lora
+  learning_rate: 1.0e-3
+  num_train_epochs: 10
+  r: 32
+  lora_alpha: 32
+  lora_dropout: 0.05
+  target_modules: ["q", "v"]   # conservative default; can expand if needed
+  bias: "none"
+  seed: 42
