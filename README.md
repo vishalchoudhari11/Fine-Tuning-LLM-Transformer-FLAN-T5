@@ -1,12 +1,11 @@
 # Flan-T5 on DialogSum: Full Fine-Tuning and LoRA (PEFT)
 
-Reproducible fine-tuning of **Flan-T5** for dialogue summarization on **DialogSum** using the **Hugging Face Trainer**. The repo includes both **full fine-tuning** and **LoRA adapters** (PEFT) with identical preprocessing and evaluation (ROUGE), allowing apples-to-apples comparisons under fixed seeds.
+Reproducible fine-tuning of **Flan-T5** for dialogue summarization on **DialogSum** using the **Hugging Face Trainer**. The repo includes both **full fine-tuning** and **LoRA adapters** (PEFT) with identical preprocessing and evaluation (ROUGE).
 
 ## Highlights
-- 🔁 Reproducible pipeline (`config.yaml`, fixed seeds, pinned deps)
+- 🔁 Reproducible pipeline (`config.yaml`, fixed seeds)
 - ⚙️ Two training modes: **full FT** and **LoRA** (parameter-efficient)
 - 📈 Built-in **ROUGE** evaluation; identical prompts and decoding
-- 🧱 Clean structure for hiring managers: clear scripts, docstrings, and CLI
 
 ## Setup
 ```bash
